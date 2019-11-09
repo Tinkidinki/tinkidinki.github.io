@@ -1,3 +1,10 @@
 name: Mahathi Vempati, Wabakiya
 markdown: GFM
-include: - README.md
+plugins:  
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include: 
+  - README.md
+
