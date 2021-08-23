@@ -31,8 +31,12 @@ github_username:  jekyll
 
 # Build settings
 theme: minima
+markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -58,3 +62,18 @@ plugins:
 
 # Added settings
 show_excerpts: true
+
+# For projects
+projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+    projects:
+    # - repo-name
+
+
