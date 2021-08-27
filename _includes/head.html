@@ -3,10 +3,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
+
+  <!--This is for the extra stylesheet that was added. The extra stylesheet must be linked before the original stylesheet for some reason.-->
+ 
+  <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
-  <!--This is for the extra stylesheet that was added-->
-  <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
