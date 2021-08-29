@@ -29,6 +29,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Header pages
+header_pages:
+  - blog.md
+  - projects.md
+  - resources.md
+  - timeline.md
+
 # Build settings
 theme: minima
 markdown: kramdown
