@@ -1,7 +1,7 @@
 ---
 title: Super Density Matrices
 layout: post
-tags: quantum-information
+tags: all-posts quantum-information
 usemathjax: true
 ---
 

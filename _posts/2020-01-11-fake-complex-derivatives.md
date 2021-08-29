@@ -2,7 +2,7 @@
 title: Fake Complex Derivatives
 layout: post
 usemathjax: true
-tags: maths
+tags: all-posts maths
 ---
 
 Having reduced (a part of) the research problem I was working on to finding a gradient, I was just about to be relieved when I realised I had no clue how to find "gradients" in the space of Hermitian matrices I was working in. And the function I wanted to find the gradient for wasn't too simple looking either.

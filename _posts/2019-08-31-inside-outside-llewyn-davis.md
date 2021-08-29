@@ -1,7 +1,7 @@
 ---
 title: Inside, Outside and all about Llewyn Davis
 layout: post
-tags: movie-review
+tags: all-posts movie-review
 ---
 
 

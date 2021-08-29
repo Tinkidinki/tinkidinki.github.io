@@ -1,7 +1,7 @@
 ---
 title: Yet Another Backpropagation Blog Post
 layout: post
-tags: machine-learning
+tags: all-posts machine-learning
 usemathjax: true
 ---
 

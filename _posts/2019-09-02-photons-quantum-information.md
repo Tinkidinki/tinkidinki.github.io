@@ -2,7 +2,7 @@
 title: Photons for Quantum Information People
 layout: post
 usemathjax: true
-tags: quantum-information
+tags: all-posts quantum-information
 ---
 As someone who studied quantum information for about a year, I was more than happy to assume that photons were natural qubits given to us, completely defined by their polarization state which I would smoothly represent with ket vectors, with which we could do whatever computation we wanted to do.
 

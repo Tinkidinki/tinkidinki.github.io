@@ -1,7 +1,7 @@
 ---
 title: Change of Basis
 layout: post
-tags: maths quantum-information
+tags: all-posts maths quantum-information
 usemathjax: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Logarithms
 layout: post
-tags: maths
+tags: all-posts maths
 usemathjax: true
 ---
 

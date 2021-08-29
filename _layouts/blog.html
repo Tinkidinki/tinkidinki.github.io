@@ -4,11 +4,7 @@ layout: default
 
 <div class="home">
  
-    <h1 class="page-heading">{{ "Vienna Waits For You" }}</h1>
-
-    <span id="{{ site.posts | map: 'tags' | uniq | join: '"></span><span id="' }}"></span>
-
-    {{ content }}
+    <h1 class="page-heading" style="text-align:center">{{ "Vienna Waits For You" }}</h1>
 
     <style>
     .post {
@@ -21,9 +17,16 @@ layout: default
 
     </style>
 
- <p>
-                Select tag: 
-                <a href="#all">show all</a>,
+
+        {{ content }}
+
+    <span style="display:none" id="all"></span>
+
+    <span id="{{ site.posts | map: 'tags' | uniq | join: '"></span><span id="' }}"></span>
+
+
+
+ <p style="text-align:center">
                 {% for tag in site.tags %}
                     <a href="#{{tag[0]}}" tags="{{tag[0]}}">{{tag[0]}}</a>{% if forloop.last == false %}, {% endif %}
                 {% endfor %}
