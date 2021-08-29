@@ -62,3 +62,17 @@
   margin-right: auto;
   width: 50%;
 }
+
+#quantum-information::before {
+   content: "";
+   display: block;
+   height: 9999px;
+   margin-top: -9999px; //higher thin page height
+}
+
+#maths::before {
+   content: "";
+   display: block;
+   height: 9999px;
+   margin-top: -9999px; //higher thin page height
+}
