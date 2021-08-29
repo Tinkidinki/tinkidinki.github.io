@@ -3,6 +3,11 @@ layout: default
 ---
 
 <div class="home">
+
+    <script type="text/javascript">
+        if (document.location.hash == "" || document.location.hash == "#")
+        document.location.hash = "#all-posts";
+    </script>
  
     <h1 class="page-heading" style="text-align:center">{{ "Vienna Waits For You" }}</h1>
 
@@ -11,7 +16,8 @@ layout: default
         display: none;
         }
 
-        {% for tag in site.tags %}#{{tag[0]}}:target ~ [tags~={{tag[0]}}]{% if forloop.last == false %}, {% endif %}{% endfor %} {
+        {% for tag in site.tags %}
+        #{{tag[0]}}:target ~ [tags~={{tag[0]}}]{% if forloop.last == false %}, {% endif %}{% endfor %} {
         display: block;
         }
 
@@ -35,11 +41,11 @@ layout: default
 
 
 
- <p style="text-align:center">
-                {% for tag in site.tags %}
-                    <a href="#{{tag[0]}}" tags="{{tag[0]}}">{{tag[0]}}</a>{% if forloop.last == false %}, {% endif %}
-                {% endfor %}
-            </p>
+    <p style="text-align:center">
+            {% for tag in site.tags %}
+                <a href="#{{tag[0]}}" tags="{{tag[0]}}">{{tag[0]}}</a>{% if forloop.last == false %}, {% endif %}
+            {% endfor %}
+        </p>
 
 
 
