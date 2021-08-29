@@ -4,6 +4,7 @@
 
 layout: home
 ---
+
 <p style="text-align: center;">
 Hello! I'm a dual degree student in Computer Science and Natural Sciences, interested in everything quantum computing! 
 </p>
