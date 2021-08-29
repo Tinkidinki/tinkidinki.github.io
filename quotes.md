@@ -1,5 +1,6 @@
 ---
 layout: default
+nobar: true
 ---
 
 # Quotes
