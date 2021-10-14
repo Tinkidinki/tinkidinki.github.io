@@ -17,7 +17,7 @@ At this point, there are way too many backprop posts on the net, including anoth
 
 
 ## Notation
-Having sensible notation clears out a lot of issues in the understanding of backprop (or a lot of other concepts, but more so here because of the oh-so-many vectors and indices and matrices)
+Having sensible notation clears out a lot of issues in the understanding of backprop (or a lot of other concepts, but more so here because of the oh-so-many vectors and indices and matrices).
 
 For the rest of this article, consider a neural network with $$n+1$$ layers, labelled $$0$$ to $$n$$. Layer $$0$$ is the input layer, and layer $$n$$ is the output layer. So, excluding the input and output layers, our network has $$n-1$$ layers. We follow 0-based convention just to make it easier while coding this up. 
 
@@ -97,7 +97,7 @@ $$m$$ is a hyperparameter that is called "learning rate" which we will worry abo
 
 However, there are two different ways of taking the derivative of a scalar with respect to a matrix, and both will leave you with different dimensionalities. 
 
-The numerator convention ensures that $$dW_i$$ has the same dimensions as $$W_i^T$$. The denominator convention ensures that $$dW_i$$ has the same dimensions as $$W_i$$ (and all the corresponding elements are correct so we can just add $$dW_i$$ to $$W_i$$ to get our new $$W$$. **For this step only**, we will use the denominator convention, since it is so convenient. 
+The numerator convention ensures that $$dW_i$$ has the same dimensions as $$W_i^T$$. The denominator convention ensures that $$dW_i$$ has the same dimensions as $$W_i$$ (and all the corresponding elements are correct so we can just add $$dW_i$$ to $$W_i$$ to get our new $$W$$). **For this step only**, we will use the denominator convention, since it is so convenient. 
 
 So, to accomplish backpropagation, it is sufficient to compute $$\frac{\partial E}{\partial W_i}$$ for every $$i$$ from $$0$$ to $$n-1$$ (Reminder: There are $$n$$ weight matrices and $$n+1$$ layers. There is no need for a weight matrix to act on the last layer.)
 
@@ -137,15 +137,21 @@ $$
 
 There are a few things to notice now:
 - We can see that if there were more layers, the same pattern would follow for all the weight matrices, so whatever we do for the above generalises to more layers. 
-- We notice that there is a repetition in terms that are calculated: The first term calculated for the $$W_2$$ expression is the same as the first term calculated for the $$W_1$$ expression. The first three terms calculated for the $$W_1$$ expression are the same as the first three terms for the $$W_0$$ expression. This repetition would continue were we to add more layers. 
-- The LHS of each side, we already decided should have the dimensionality of $$W_i$$ so that we can just add it to $$W_i$$. 
-- Let us take a look at the chain rule terms: 
--- The first term $$\frac{\partial E}{\partial z_3}$$ is the derivative of a scalar with respect to a vector. In numerator convention, this gives us a matrix of the same dimensions as $$z_3^T$$, that is $$1 \times l_3$$.
--- Look at the term $$\frac{\partial z_3}{\partial a_2}$$. In numerator convention, the dimensionality of this term is $$l_3 \times l_2$$.
--- Leave out the last term in each expression (the derivative with respect to $$W_i$$), and we notice that assuming numerator convention, the chain rule works out perfectly -- that is, the dimensions of each term make the expression compatible for multiplication. This is no surprise, since it is the whole point of the convention. 
-- An issue you probably can notice is the bad-looking last term, which is a derivative of a vector with respect to a matrix, which is not defined well in terms of vectors or matrices. 
 
-As a summary, for each expression, we have (i) the first few terms multiplying out to give a nice derivative, (ii) a last term hat we don't know how to express, and (iii) everything needs to be put together in denominator convention so that we can add it to $$W_i$$. 
+- We notice that there is a repetition in terms that are calculated: The first term calculated for the $$W_2$$ expression is the same as the first term calculated for the $$W_1$$ expression. The first three terms calculated for the $$W_1$$ expression are the same as the first three terms for the $$W_0$$ expression. This repetition would continue were we to add more layers. 
+
+- The LHS of each side, we already decided should have the dimensionality of $$W_i$$ so that we can just add it to $$W_i$$. 
+
+- Let us take a look at the chain rule terms: 
+    - The first term $$\frac{\partial E}{\partial z_3}$$ is the derivative of a scalar with respect to a vector. In numerator convention, this gives us a matrix of the same dimensions as $$z_3^T$$, that is $$1 \times l_3$$.
+
+    - Look at the term $$\frac{\partial z_3}{\partial a_2}$$. In numerator convention, the dimensionality of this term is $$l_3 \times l_2$$.
+
+    - Leave out the last term in each expression (the derivative with respect to $$W_i$$), and we notice that assuming numerator convention, the chain rule works out perfectly -- that is, the dimensions of each term make the expression compatible for multiplication. This is no surprise, since it is the whole point of the convention. 
+
+    - An issue you probably can notice is the bad-looking last term, which is a derivative of a vector with respect to a matrix, which is not defined well in terms of vectors or matrices. 
+
+As a summary, for each expression, we have (i) the first few terms multiplying out to give a nice derivative, (ii) a last term that we don't know how to express, and (iii) everything needs to be put together in denominator convention so that we can add it to $$W_i$$. 
 
 Let us deal with these issues one by one. 
 
@@ -195,20 +201,28 @@ To calculate an $$az$$ derivative:
 
 
 $$
-\partial {\frac{\partial a_i}{{\partial z_i}}}^{jk} = \frac{\partial \sigma(z_i^j)}{{\partial z_i^k}} = \sigma'(z_i^j)\delta_{jk}
+\partial {\frac{\partial a_i}{\partial z_i}}^{jk} = \frac{\partial \sigma(z_i^j)}{\partial z_i^k} = \sigma'(z_i^j)\delta_{jk}
 $$
 
 Therefore, 
-$$\frac{\partial a_i}{{\partial z_i}} = diag( \begin{bmatrix}\sigma'(z_i^0) \;\;\;\sigma'(z_i^1) \;\;\; ... \;\;\;  \sigma'(z_i^{l_i-1})\end{bmatrix}$$
+
+$$\frac{\partial a_i}{\partial z_i} = diag( \begin{bmatrix}\sigma'(z_i^0) \;\;\;\sigma'(z_i^1) \;\;\; ... \;\;\;  \sigma'(z_i^{l_i-1})\end{bmatrix}$$
 
 To calculate a $$za$$ derivative:
 We have, 
+
 $$z_{i+1} = W_i \times a_i$$
+
 Therefore, 
+
 $$z_{i+1}^{j} = \sum_r W_i^{jr}a_i^r$$
+
 and
+
 $${\frac{\partial z_{i+1}}{\partial a_i}}^{jk} =  W_i^{jk}$$
+
 So, we have:
+
 $$\frac{\partial z_{i+1}}{\partial a_i}=  W_i$$
 
 That's it! We have the $$za$$ and the $$az$$ derivatives, and now we're good to go!

@@ -34,6 +34,9 @@ header_pages:
   - resources.md
   - timeline.md
 
+# Comments
+disqus:
+  shortname: Mahathi
 # Build settings
 theme: minima
 markdown: kramdown

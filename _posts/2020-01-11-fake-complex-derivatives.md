@@ -15,7 +15,7 @@ The answerer of the question suggested the book 'Complex-Valued Matrix Different
 
 So, first things first. The word for "differentiable" for complex valued functions of complex numbers is analytic. Before we get into finding derivatives, we need to check whether the function is analytic in the domain we're interested in. 
 
-Taking our function $f(x + iy) = u + iv$, and ensuring that the derivative is the same when a point is approached from all directions gives us the Cauchy-Reimann equations:
+Taking our function $$f(x + iy) = u + iv$$, and ensuring that the derivative is the same when a point is approached from all directions gives us the Cauchy-Reimann equations:
 
 $$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \text{ , } \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$$
 
@@ -27,40 +27,40 @@ Consider the following functions:
 $$p(x,y) = x + y \\
 q(x,y) = y$$
 
-We can now write $x$ and $y$ in terms of $p$ and $q$:
+We can now write $$x$$ and $$y$$ in terms of $$p$$ and $$q$$:
 $$x (p,q)= p - q \\
 y(p,q) = q$$
 
-Now, consider $\frac{\partial p}{\partial q}$:
+Now, consider $$\frac{\partial p}{\partial q}$$:
 $$ = \frac{\partial{(x + y)}}{\partial y} = 1$$
 orrrr,
 $$ = \frac{\partial p}{\partial x}\frac{\partial x}{\partial q} + \frac{\partial p}{\partial y}\frac{\partial y}{\partial q} = 0$$
 
 So, which is the right partial derivative?
 
-It turns out both are correct. In the first case, $x$ and $y$ are our independent variables, so $p$ turns out to be dependent on $q$. In the second case, $p$ and $q$ are considered independent variables, so the partial derivative is 0. 
+It turns out both are correct. In the first case, $$x$$ and $$y$$ are our independent variables, so $$p$$ turns out to be dependent on $$q$$. In the second case, $$p$$ and $$q$$ are considered independent variables, so the partial derivative is 0. 
 
-So, these really depend on our choice of variables. Math, unlike CS sadly has no implication just because something is on the left or right of the $=$ sign, so we're left to specify this clearly when we're working in a system. 
+So, these really depend on our choice of variables. Math, unlike CS sadly has no implication just because something is on the left or right of the $$=$$ sign, so we're left to specify this clearly when we're working in a system. 
 
 ### Real valued complex functions aren't differentiable :(
 
 When we do matrix calculus, we want to be able to differentiate everything. Scalar functions of vectors, matrix functions of scalars, scalar functions of matrices -- everything.
 
-However,  just take the simple case of a real valued complex function. This means $v$ is always 0, and the first Cauchy-Reimann equation itself is not satisfied unless $u$ is constant with respect to $x$. So, $\frac{d f}{d z}$ can't be found for arbitrary real valued function.
+However,  just take the simple case of a real valued complex function. This means $$v$$ is always 0, and the first Cauchy-Reimann equation itself is not satisfied unless $$u$$ is constant with respect to $$x$$. So, $$\frac{d f}{d z}$$ can't be found for arbitrary real valued function.
 
 Perfect. The first thing we learn is we can't find derivatives of real valued functions, let alone the other grandiose plans involving matrices and vectors. 
 
 ### So, what do we do?
 
-This is where we cheat. If we change the independent variables from $x$ and $y$ to $z$ and $z^*$, where now, 
+This is where we cheat. If we change the independent variables from $$x$$ and $$y$$ to $$z$$ and $$z^*$$, where now, 
 $$x = \frac{z + z^*}{2} ,y = \frac{z - z^*}{2i}$$
 
-Then we can take the partial derivative with respect to $z$ !
-For instance for the real valued function $f = z^*z$, $\frac{\partial f}{\partial z}$ is just $z^*$.
+Then we can take the partial derivative with respect to $$z$$ !
+For instance for the real valued function $$f = z^*z$$, $$\frac{\partial f}{\partial z}$$ is just $$z^*$$.
 
-The partial derivatives with respect to $z$ and $z^*$ are called formal derivatives -- which we have to satisfy ourselves with.
+The partial derivatives with respect to $$z$$ and $$z^*$$ are called formal derivatives -- which we have to satisfy ourselves with.
 
-Tldr; we couldn't find the derivative with respect to $z$, so we changed the system such that $z$ became an independent variable, and made do with taking the partial derivative with respect to $z$.
+Tldr; we couldn't find the derivative with respect to $$z$$, so we changed the system such that $$z$$ became an independent variable, and made do with taking the partial derivative with respect to $$z$$.
 
 ### Aside: Derivatives for multivariable real valued functions?
 One might ask, aren't real valued complex functions analogous to having a real 2-variable function? What exactly happens there?
@@ -73,5 +73,5 @@ Which is the fundamental difference between complex differentiation and the abov
 
 (You could still argue that the gradient is actually one complex number, I guess - still need to think about that!)
 
-_Thanks to Siddharth Bhat for the intuition on changing independent variables and Jayitha for the reasoning about real valued functions._
+_Thanks to [Siddharth Bhat](https://bollu.github.io/) for the intuition on changing independent variables and [Jayitha](https://jayitha.github.io/) for the reasoning about real valued functions._
 
