@@ -9,4 +9,7 @@ nobar: true
 
 -- Scott Aaronson, [in his blog](https://www.scottaaronson.com/blog/?p=5706).
 
+> "On this comeback, I've worked so hard---harder than if I had had no success"
+
+-- Aly Raisman, six time Olympic medal-winning gymnast
 

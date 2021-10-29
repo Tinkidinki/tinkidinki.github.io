@@ -11,7 +11,7 @@ At this point, there are way too many backprop posts on the net, including anoth
 
 ## Prerequisites
 * Matrix differentiation: I recommend [this](https://explained.ai/matrix-calculus/) post which is long but worthwhile.  
-* Numerator and denominator convention: This is part of matrix differentiation, but especially important. The [Wikipedia page](https://en.wikipedia.org/wiki/Matrix_calculus) covers it well, and also succintly states an issue with the conventions:  _Authors of both groups (numerator and denominator convention) often write as though their specific convention were standard._
+* Numerator and denominator convention: This is part of matrix differentiation, but especially important. The [Wikipedia page](https://en.wikipedia.org/wiki/Matrix_calculus) covers it well, and also states an issue with the conventions:  _Authors of both groups (numerator and denominator convention) often write as though their specific convention were standard._
 * High-level overview of how a feed-forward neural network works. 
 * Understanding of why the negative of the gradient of a function at a point is the direction of its steepest descent.
 

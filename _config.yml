@@ -30,9 +30,10 @@ github_username:  jekyll
 # Header pages
 header_pages:
   - blog.md
-  - projects.md
   - resources.md
   - timeline.md
+
+# Removed the projects page
 
 # Comments
 disqus:
