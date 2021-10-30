@@ -3,6 +3,7 @@ layout: post
 title:  "Many Legged Spiders"
 usemathjax: true
 tags: all-posts quantum-information zx-calculus
+published: false
 ---
 
 ## Introduction
