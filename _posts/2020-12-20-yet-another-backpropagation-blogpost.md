@@ -235,5 +235,5 @@ We do hope you're going to use this for a dataset of a size larger than one. Of 
 $$dW_i^{total} = dW_i^0 + dW_i^1 +... +  dW_i^{t-1}$$
 We then update the weights by adding $$dW_i$$ to every weight $$W_i$$ and repeat the process. 
 ## Finally, the code
-Code implementing the above, with documentation and testing examples, can be found in [this github repository](https://github.com/Tinkidinki/neural-network). Feel free to comment here or send PR's on the repo! 
+Code implementing the above, with documentation and testing examples, can be found in [this github repository](https://github.com/Tinkidinki/neural-network). 
 

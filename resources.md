@@ -4,10 +4,10 @@ title: Resources
 ---
 
 # Quantum Information and Computing
-## Beginner Resources
+### Beginner Resources
 - Excellent slides on the Bloch sphere: [The Bloch Sphere](http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere.pdf), [Rotations on the Bloch Sphere](http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf)
 
-## Miscellaneous
+### Miscellaneous
 - [Exact quantum lower bound for Grover's problem](https://arxiv.org/abs/0810.3647): The clearest explanation for optimality of Grover's algorithm that I've seen 
 - [A Grand Unification of Quantum Algorithms](https://arxiv.org/abs/2105.02859): Explains how phase estimation, simulation and Grover's search all arise from the quantum singular value transform
 - [ZX-calculus for the working quantum computer scientist](https://arxiv.org/abs/2012.13966): Beginner's guide to ZX Calculus, a graphical language for quantum computing
