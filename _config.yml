@@ -36,8 +36,8 @@ header_pages:
 # Removed the projects page
 
 # Comments
-disqus:
-  shortname: Mahathi
+# disqus:
+# shortname: Mahathi
 # Build settings
 theme: minima
 markdown: kramdown
