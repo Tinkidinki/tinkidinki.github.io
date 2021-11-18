@@ -13,3 +13,7 @@ nobar: true
 
 -- Aly Raisman, six time Olympic medal-winning gymnast
 
+> "A certain type of perfection can only be realized through a limitless accumulation of the imperfect."
+
+-- Haruki Murakami
+
