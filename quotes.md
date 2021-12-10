@@ -17,3 +17,7 @@ nobar: true
 
 -- Haruki Murakami
 
+> It is the great glory as well as the great threat of science that everything which is in principle possible can be done if the intention to do it is sufficiently resolute. 
+
+-- Sir Peter Medawar
+

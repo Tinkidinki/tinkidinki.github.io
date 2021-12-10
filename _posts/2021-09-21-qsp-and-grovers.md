@@ -8,7 +8,7 @@ published: true
 
 On May 6th, 2021, Chuang et al. posted the paper [_A Grand Unification of Quantum Algorithms_](https://arxiv.org/abs/2105.02859) which claims that arguably the three most important algorithms in quantum computing: search, factoring and simulation, all have a common underlying structure: the quantum singular value transform. In this pedagogical paper, based heavily on work by [Gilyen et al.](https://arxiv.org/abs/1806.01838), they explain this structure, starting out with a primitive called _quantum signal processing_, which leads to the _quantum eigenvalue transformation_, and finally, the coveted _quantum singular value transformation_.
 
-This post covers my take on the first part of this review: quantum signal processing, and how Grover's search emerges from it. 
+This article covers my take on the first part of this review: quantum signal processing, and how Grover's search emerges from it. 
 
 We'll organise this into three sections:
 1. **Quantum signal processing (QSP)**: This is a transformation that is defined for single qubit operations. 
@@ -56,8 +56,8 @@ However, the _really_ cool application is that Grover's search emerges beautiful
 Let's leave our happy $$2$$-dimensional space, and consider some arbitrary finite dimensional Hilbert space $$\mathcal{H}$$.
 Assume someone provides you with the following three operators:
 1. Some unitary matrix $$U$$ which acts on $$\mathcal{H}$$.
-2. Operators of the form $$e^{i \phi \vert A_0 \rangle \langle A_0 \vert}$$, for any $$\vert \phi\rangle$$'s that you please, but a fixed $$\vert A_0 \rangle$$.
-3. Analogously, operators of the form $$e^{i \phi \vert B_0 \rangle \langle B_0 \vert}$$, for any $$\vert \phi\rangle$$'s that you please, but a fixed $$\vert B_0 \rangle$$.
+2. Operators of the form $$e^{i \phi \vert A_0 \rangle \langle A_0 \vert}$$, for any $$\phi$$'s that you please, but a fixed $$\vert A_0 \rangle$$.
+3. Analogously, operators of the form $$e^{i \phi \vert B_0 \rangle \langle B_0 \vert}$$, for any $$\phi$$'s that you please, but a fixed $$\vert B_0 \rangle$$.
 
 Aaaand, you've been promised that $$a \equiv \langle A_0 \vert U \vert B_0 \rangle \neq 0$$.[^2] 
 
@@ -242,7 +242,7 @@ Casting Grover's as a QSP problem leads to pretty cool insights. One of them is 
 
 It is tempting to ask--can one find a lower degree QSP polynomial which also satisfies the $$P(1/\sqrt N)$$ constraint? Since the degree of the polynomial directly relates to the number of times the oracle is called, one would then get a more efficient solution to quantum search! However, this tantalizing possibility is ruled out by [lower bounds on the search problem](https://arxiv.org/abs/0810.3647): a lower degree QSP polynomial that satifies our condition simply does not exist!
 
-And this depressing thought which saddened me for a few weeks is a good place to end this post.
+And this depressing thought which saddened me for a few weeks is a good place to end this article.
 
 ---
 <br>
