@@ -21,3 +21,4 @@ nobar: true
 
 -- Sir Peter Medawar
 
+> Starting with a problem, and then searching for a solution covers only one part of research. Research aims in the end to match problems to solutions to maximize happiness, but ideas don't have any ordering imposed on them. You may have to start with solutions, and find problems which they solve. This is why current quantum computing research makes sense: you have been promised access to enormous power; does it not make sense to ask what one can do with this power?
