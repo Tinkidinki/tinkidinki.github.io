@@ -13,9 +13,13 @@ title: Resources
 - [ZX-calculus for the working quantum computer scientist](https://arxiv.org/abs/2012.13966): Beginner's guide to ZX Calculus, a graphical language for quantum computing
 
 # Fiction
-- The [Mistborn series](https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/#FINALEMPIRE) (I'm currently on Book 2), and Sanderson's [Laws of Magic](https://www.brandonsanderson.com/sandersons-first-law/).
+- The [Mistborn series](https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/#FINALEMPIRE), and Sanderson's [Laws of Magic](https://www.brandonsanderson.com/sandersons-first-law/).
 - The [Cherub series](https://www.goodreads.com/series/55394-cherub): highly underrated book series about a bunch of super cool teenage spies.
 
 # Fitness
 - Caroline Girvan's intense and fun workouts, packed with lots of diversity: [Youtube channel](https://www.youtube.com/c/CarolineGirvan)
+
+# Motivation
+- So, you think you're bad at Math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
+- I will Survive! [video](https://youtu.be/4Wl-3kadvgw) 
 
