@@ -20,6 +20,6 @@ title: Resources
 - Caroline Girvan's intense and fun workouts, packed with lots of diversity: [Youtube channel](https://www.youtube.com/c/CarolineGirvan)
 
 # Motivation
-- So, you think you're bad at Math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
+- So, you think you're bad at math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
 - I will Survive! [video](https://youtu.be/4Wl-3kadvgw) 
 
