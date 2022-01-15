@@ -21,5 +21,5 @@ title: Resources
 
 # Motivation
 - So, you think you're bad at math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
-- I will Survive! [video](https://youtu.be/4Wl-3kadvgw) 
+- I will survive! [video](https://youtu.be/4Wl-3kadvgw) 
 
