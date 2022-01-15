@@ -3,7 +3,7 @@ title: The Hadamard Sandwich
 layout: post
 tags: all-posts quantum-algorithms  
 usemathjax: true
-published: false
+published: true
 ---
 
 [//]: # Questions that remain
@@ -154,12 +154,53 @@ $$U_G \vert \alpha\rangle = - \vert \alpha\rangle$$ if $$ \vert \alpha\rangle$$ 
 
 $$U_G \vert \alpha\rangle = \vert \alpha\rangle$$ otherwise.   
 
-In the fixed point version, we require a unitary that gives a phase of our choice, rather than $$-1$$, to the target states. Given a controlled version of $$U_G$$, we require a controlled version of $$U_G'$$ such that 
+In the fixed point version, we require a unitary that gives a phase of our choice, rather than $$-1$$, to the target states. Given a controlled version of $$U_G$$, we wish to apply $$U_G'$$ such that 
 
 
 $$U_G' \vert \alpha\rangle = e^{i\theta} \vert \alpha\rangle$$ if $$ \vert \alpha\rangle$$ is a target, and  
 
 $$U_G' \vert \alpha\rangle = \vert \alpha\rangle$$ otherwise.   
 
-Given that the unitary $$U_G$$ has only eigenvalues $$-1$$ and $$+1$$, this already smells like a Hadamard Sandwich. But how can we accomplish the transformation using this trick? We can split this into three steps. First, we use the Hadamard Sandwich once to obtain a projector-controlled-$$X$$ from the $$U_G$$. Since the projector projects into the target eigenspace, we can use this to flip an ancilla based on whether the input is in the target eigenspace or not. Second, we can then apply a phase to the ancilla conditioned on it being in the $$|1\rangle$$ state. Finally, we apply the 
+Given that the unitary $$U_G$$ has only eigenvalues $$-1$$ and $$+1$$, this already smells like a Hadamard Sandwich, and indeed, this transformation is accomplished by using the Hadamard Sandwich twice:  
+![grovers-hadamard-sandwich](/assets/the-hadamard-sandwich/grovers-hadamard-sandwich.png)
 
+This circuit has three parts. First, we apply a Hadamard-Sandwiched controlled-$$U_G$$. Then, we apply a $$Z$$ rotation on the first qubit, followed by another Hadamard-Sandwiched controlled-$$U_G$$. 
+
+Assume $$\vert 0\rangle$$ is input as the top qubit. The idea is that the first Hadamard Sandwich flips the top qubit to $$\vert 1\rangle $$ only if the other qubits are in the $$-1$$ eigenspace of $$U_G$$. The rotation gate, which is $$e^{\frac{-i\theta}{2}}\vert 0 \rangle \langle 0 \vert + e^{\frac{i\theta}{2}}\vert 1 \rangle \langle 1 \vert = e^{\frac{-i\theta}{2}}\big(\vert 0 \rangle \langle 0 \vert + e^{i \theta}\vert 1 \rangle \langle 1 \vert\big)$$ is then applied, which gives a phase to $$\vert 1 \rangle$$. The final Hadamard Sandwich essentially makes the top qubit $$\vert 0 \rangle$$ again, attaching the phase to the $$-1$$-eigenspace, producing $$U_G'$$. To prove this, (1) we first write the circuit expression as is, (2) then take global phase common, and (3) replace the Hadamard Sandwich controlled-$$U_G$$ with a projector-controlled-$$X$$:   
+
+$$\big(H|0\rangle \langle 0|H \otimes I + H|1\rangle \langle 1|H \otimes U_G \big) \bigg(\big(e^{\frac{-i\theta}{2}}\vert 0 \rangle \langle 0 \vert + e^{\frac{i\theta}{2}}\vert 1 \rangle \langle 1 \vert \big) \otimes I \bigg) \big(H|0\rangle \langle 0|H \otimes I + H|1\rangle \langle 1|H \otimes U_G \big)  $$
+
+$$= e^{-\frac{i\theta}{2}} \big(H|0\rangle \langle 0|H \otimes I + H|1\rangle \langle 1|H \otimes U_G \big) \bigg(\big(\vert 0 \rangle \langle 0 \vert  + e^{i \theta}\vert 1 \rangle \langle 1 \vert \big) \otimes I \bigg)\big(H|0\rangle \langle 0|H \otimes I + H|1\rangle \langle 1|H \otimes U_G \big)  $$
+
+$$= e^{-\frac{i\theta}{2}} \big( X \otimes P + I \otimes (I-P)\big) \bigg(\big(\vert 0 \rangle \langle 0 \vert + e^{i \theta}\vert 1 \rangle \langle 1 \vert \big) \otimes I \bigg)\big(X \otimes P + I \otimes (I-P)\big)  $$
+
+$$= e^{-\frac{i\theta}{2}} \big( X \otimes P + I \otimes (I-P)\big) \bigg(\big(\vert 0 \rangle \langle 1 \vert + e^{i \theta}\vert 1 \rangle \langle 0 \vert \big) \otimes P + \big(\vert 0 \rangle \langle 0 \vert + e^{i \theta}\vert 1 \rangle \langle 1 \vert \big) \otimes (I-P) \bigg)$$
+
+$$= e^{-\frac{i\theta}{2}}\bigg(\big(\vert 1 \rangle \langle 1 \vert + e^{i \theta}\vert 0 \rangle \langle 0 \vert \big) \otimes P + \big(\vert 0 \rangle \langle 0 \vert + e^{i \theta}\vert 1 \rangle \langle 1 \vert \big) \otimes (I-P) \bigg)$$
+
+$$= e^{-\frac{i\theta}{2}} \bigg(|0\rangle \langle 0| \otimes \big(e^{i \theta} P + (I-P)\big ) + |1\rangle \langle 1| \otimes \big(P + e^{i \theta} (I-P)\big ) \bigg)$$
+
+$$= e^{-\frac{i\theta}{2}} \bigg(|0\rangle \langle 0| \otimes U_G' + |1\rangle \langle 1| \otimes \big(P + e^{i \theta} (I-P)\big ) \bigg)$$
+
+Thus, upto global phase, the circuit applies $$U_G'$$ when the top qubit is set to $$\vert 0\rangle$$.
+
+
+## The Eigenvalue Threshold Problem
+The statement of this problem is: given a Hamiltonian $$\mathcal{H}$$, and a threshold value $$\lambda_{th}$$, return whether or not the Hamiltonian has any eigenvalues less than $$\lambda_{th}$$. To solve this problem, we are also given access to a vector which has significant overlap with the low eigenvalues of $$\mathcal{H}$$, should they exist. That is, we have access to $$| \psi \rangle $$ such that $$\Vert \pi |\psi \rangle \Vert \geq c$$, where $$\pi = \sum_i \vert l_i \rangle \langle l_i \vert$$, and $$\vert l_i \rangle$$ are eigenvectors of $$\mathcal{H}$$ that have eigenvalues less than  $$\lambda_{th}$$.
+
+Once again, without getting into the details which are explained in [Martyn et al.](https://arxiv.org/abs/2105.02859), we simply state that applying the QSVT method to this problem leaves us with a final controlled-$$U$$ that has the same eigenvectors as $$\mathcal{H}$$, but with its eigenvalues tweaked: an eigenvalue is now close to $$-1$$ if the original eigenvalue was less than $$\lambda_{th}$$, and is close to $$1$$ if the original eigenvalue was larger than $$\lambda_{th}$$. 
+
+Thus, to decide the eigenvalue threshold problem, we are left to (roughly) differentiate between a controlled version of the identity matrix, and a controlled version of a unitary with $$-1$$'s and $$1$$'s on its diagonal.  
+
+Here, the Hadamard Sandwich is once again used to convert the controlled-$$U$$ to a $$\pi$$-controlled $$X$$---and when $$\vert \psi \rangle$$ is given as input to this circuit, 
+- If none of the eigenvalues of $$\mathcal{H}$$ were greater than $$\lambda_{th}$$, then after QSVT, the unitary does not have any $$-1$$ eigenvalues, $$\pi$$ is a null projector, and the top qubit is not flipped.
+- If at least one of the eigenvalues of $$\mathcal{H}$$ was less than $$\lambda_{th}$$, then after QSVT, the unitary has some $$-1$$ eigenvalues, $$\pi$$ is a projector into this $$-1$$-eigenspace, with some probability, the top qubit is flipped. 
+
+Thus, measuring the top qubit can be used to differentiate between the two cases.
+
+![eigenvalue-threshold-grand-paper](/assets/the-hadamard-sandwich/eigenvalue-threshold-grand-paper.png)
+
+The above image depicting the Hadamard Sandwich being used in the Eigenvalue Threshold problem is taken from the [Martyn et al.](https://arxiv.org/abs/2105.02859) paper. 
+
+## Conclusion
+In this post, we saw how the simple primitive of converting a controlled-$$U$$ to a $$P$$-controlled-$$X$$ appears in quantum computing in accomplishing several different tasks. This primitive also appears as part of the QSVT-based phase estimation algorithm. Let me know in the comments if you spot this being used in any other algorithm in quantum computing!  
