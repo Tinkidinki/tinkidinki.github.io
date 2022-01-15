@@ -208,7 +208,7 @@ In this post, we saw how the simple primitive of converting a controlled-$$U$$ t
 Added comments
 
 <script src="https://utteranc.es/client.js"
-        repo="tinkidinki.github.io"
+        repo="Tinkidinki/tinkidinki.github.io"
         issue-term="pathname"
         label="Comment"
         theme="github-light"
