@@ -205,13 +205,4 @@ The above image depicting the Hadamard Sandwich being used in the Eigenvalue Thr
 ## Conclusion
 In this post, we saw how the simple primitive of converting a controlled-$$U$$ to a $$P$$-controlled-$$X$$ appears in quantum computing in accomplishing several different tasks. This primitive also appears as part of the QSVT-based phase estimation algorithm. Let me know in the comments if you spot this being used in any other algorithm in quantum computing!  
 
-Added comments
 
-<script src="https://utteranc.es/client.js"
-        repo="Tinkidinki/tinkidinki.github.io"
-        issue-term="pathname"
-        label="Comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

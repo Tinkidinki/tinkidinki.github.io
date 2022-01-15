@@ -23,3 +23,11 @@ title: Resources
 - So, you think you're bad at math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
 - I will survive! [video](https://youtu.be/4Wl-3kadvgw) 
 
+<script src="https://utteranc.es/client.js"
+        repo="Tinkidinki/tinkidinki.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
