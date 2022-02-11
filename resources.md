@@ -13,6 +13,8 @@ title: Resources
 - [ZX-calculus for the working quantum computer scientist](https://arxiv.org/abs/2012.13966): Beginner's guide to ZX Calculus, a graphical language for quantum computing
 
 # Fiction
+- The [Strike series](https://www.goodreads.com/series/108050-cormoran-strike)
+- The [Millenium series](https://www.goodreads.com/series/44598-millennium)
 - The [Mistborn series](https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/#FINALEMPIRE), and Sanderson's [Laws of Magic](https://www.brandonsanderson.com/sandersons-first-law/).
 - The [Cherub series](https://www.goodreads.com/series/55394-cherub): highly underrated book series about a bunch of super cool teenage spies.
 
