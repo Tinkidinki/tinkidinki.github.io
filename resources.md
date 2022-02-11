@@ -14,7 +14,7 @@ title: Resources
 
 # Fiction
 - The [Strike series](https://www.goodreads.com/series/108050-cormoran-strike)
-- The [Millenium series](https://www.goodreads.com/series/44598-millennium)
+- The [Millennium series](https://www.goodreads.com/series/44598-millennium)
 - The [Mistborn series](https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/#FINALEMPIRE), and Sanderson's [Laws of Magic](https://www.brandonsanderson.com/sandersons-first-law/).
 - The [Cherub series](https://www.goodreads.com/series/55394-cherub): highly underrated book series about a bunch of super cool teenage spies.
 
