@@ -12,6 +12,9 @@ title: Resources
 - [A Grand Unification of Quantum Algorithms](https://arxiv.org/abs/2105.02859): Explains how phase estimation, simulation and Grover's search all arise from the quantum singular value transform
 - [ZX-calculus for the working quantum computer scientist](https://arxiv.org/abs/2012.13966): Beginner's guide to ZX Calculus, a graphical language for quantum computing
 
+# Software Development
+- [Git fetch and merge](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)
+
 # Fiction
 - The [Strike series](https://www.goodreads.com/series/108050-cormoran-strike)
 - The [Millennium series](https://www.goodreads.com/series/44598-millennium)
