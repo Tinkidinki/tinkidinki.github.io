@@ -5,7 +5,7 @@
 layout: home
 ---
 <p style="text-align: center;">
-Hello! I'm a Quantum Computing PhD student at the University of Maryland. I find that I can get myself interested in almost anything if I spend some time thinking deeply about it. Currently, I'm thinking about bridging the incredible theory we have in quantum algorithms with applications.
+Hello! I'm a Quantum Computing PhD student at the University of Maryland. Currently, I'm thinking about bridging the incredible theory we have in quantum algorithms with applications.
 </p>
 
 <div class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed center"> 
