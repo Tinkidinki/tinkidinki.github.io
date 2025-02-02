@@ -4,8 +4,7 @@ title: Timeline
 ---
 
 | ----------- | ----------- |
-| February 2025 | Our paper _Quantum advantage and lower bounds in parallel query complexity
-_ got accepted at ITCS 2024 and QIP 2025. Excited to meet folks at QIP! |
+| February 2025 | Our paper _Quantum advantage and lower bounds in parallel query complexity_ got accepted at ITCS 2024 and QIP 2025. Excited to meet folks at QIP! |
 | August 2022 | Joined the Computer Science PhD programme at University of Maryland, College Park |
 | February 2022 | My paper _A-unital Operations and Quantum Conditional Entropy_ was recently published in [Quantum journal](https://quantum-journal.org/papers/q-2022-02-02-641/) | 
 | October 2021      | My paper _A-unital Operations and Quantum Conditional Entropy_ is now on [arxiv](https://arxiv.org/abs/2110.12527)!     |
