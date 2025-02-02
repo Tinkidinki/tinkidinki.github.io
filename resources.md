@@ -24,6 +24,9 @@ title: Resources
 # Fitness
 - Caroline Girvan's intense and fun workouts, packed with lots of diversity: [Youtube channel](https://www.youtube.com/c/CarolineGirvan)
 
+# Mental Health
+- I cannot overstate how much Heidi Priebe's [Youtube channel](https://www.youtube.com/@heidipriebe1) has helped me.
+  
 # Motivation
 - So, you think you're bad at math... by Dr. Courtney Gibbons [video](https://youtu.be/kenf8E1RuoA)
 - I will survive! [video](https://youtu.be/4Wl-3kadvgw) 
