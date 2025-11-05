@@ -5,7 +5,7 @@
 layout: home
 ---
 <p style="text-align: center;">
-Hello! I'm a Quantum Computing PhD student at the University of Maryland. Currently, I'm thinking about bridging the incredible theory we have in quantum algorithms with applications.
+Hello! I'm a Quantum Computing PhD student at the University of Maryland. Currently, I'm thinking about bridging the incredible theory we have in quantum algorithms with applications - in particular, solving PDE's on quantum computers - I enjoy discussing any aspect of this/ reviewing papers on this topic - so hit me up for either!
 </p>
 
 <div class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed center"> 
